@@ -20,3 +20,12 @@ export const protect = (req: Request, res: Response, next: NextFunction) => {
     res.status(401).json({ message: 'Token invalid' });
   }
 };
+
+export const authorizeRole = (...allowedRoles: string[]) => {
+  return (req: any, res: Response, next: NextFunction) => {
+    if (!req.user || !allowedRoles.includes(req.user.role)) {
+      return res.status(403).json({ message: 'Access denied' });
+    }
+    next();
+  };
+};

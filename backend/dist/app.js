@@ -4,12 +4,14 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
+import bookRoutes from './routes/bookRoutes.js';
 dotenv.config();
 connectDB();
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes);
+app.use('/api/books', bookRoutes);
 app.get('/', (req, res) => {
     res.send('E-book Store API is running...');
 });

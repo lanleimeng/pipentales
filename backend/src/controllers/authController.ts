@@ -30,6 +30,7 @@ export const registerUser = async (req: Request, res: Response) => {
       _id: user._id.toString(),
       name: user.name,
       email: user.email,
+      role: user.role,
       token,
     });
   } catch (error) {
@@ -59,6 +60,7 @@ export const loginUser = async (req: Request, res: Response) => {
       _id: user._id.toString(),
       name: user.name,
       email: user.email,
+      role: user.role,
       token,
     });
   } catch (error) {
