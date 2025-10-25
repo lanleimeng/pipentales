@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-maple: #F7A54A;
+  --accent-glow: #FFD79A;
+  --background-maple: #FFF8F0;
+  --card-maple: #FFE9D6;
+  --text-primary: #3B2F2F;
+  --text-secondary: #7D5A50;
+  --border-maple: #EFD1B8;
+  --error: #EF4444;
+  --success: #16A34A;
+}
